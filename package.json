@@ -1,0 +1,14 @@
+{
+  "name": "FullstackReact",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/goawmfhfl/shopping-mall.git",
+  "author": "jae <goawmfhfl1@naver.com>",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
+    "react-router-dom": "^6.3.0",
+    "vite": "^2.9.9"
+  }
+}

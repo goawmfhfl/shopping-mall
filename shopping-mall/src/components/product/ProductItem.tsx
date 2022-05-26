@@ -10,14 +10,12 @@ const ProductItem = ({
     title,
 }: Product) => {
     return (
-        <li>
-            <p>{category}</p>
-            <p>{description}</p>
-            <img src={image} />
-            <span>{price}</span>
-            <span>{title}</span>
-            <span>{rating.rate}</span>
-            <span>{rating.count}</span>
+        <li className="products-item">
+            <p className="cateroty">{category}</p>
+            <p className="title">{title}</p>
+            <img src={image} className="image" />
+            <span className="price">{price}</span>
+            <span className="rating">{rating.rate}</span>
         </li>
     );
 };

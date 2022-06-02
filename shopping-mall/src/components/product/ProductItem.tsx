@@ -1,6 +1,9 @@
+import { useMutation } from "react-query";
 import { Link } from "react-router-dom";
 import { useRecoilState } from "recoil";
+import { ADD_CART } from "../../graphql/cart";
 import { Product } from "../../graphql/products";
+import { graphqlFetcher } from "../../queryClient";
 import { cartItemSelector } from "../../recoils/cart";
 
 const ProductItem = ({
@@ -11,8 +14,12 @@ const ProductItem = ({
     description,
     createdAt,
 }: Product) => {
+    // const { mutate: addCart } = useMutation((id: string) =>
+    //     graphqlFetcher(ADD_CART, { id }),
+    // );
+
     const [cartAmount, setCartAmount] = useRecoilState(cartItemSelector(id));
-    const addToCart = () => setCartAmount((prev) => (prev || 0) + 1);
+    const addToCart = () => setCartAmount(cartAmount || 0 + 1);
 
     return (
         <li className="products-item">

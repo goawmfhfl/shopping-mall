@@ -33,7 +33,7 @@ export const GET_PRODUCT = gql`
         price
         title
         description
-        createdAtid
+        createdAt
     }
 `;
 

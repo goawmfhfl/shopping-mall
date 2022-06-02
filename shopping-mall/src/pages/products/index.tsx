@@ -8,6 +8,7 @@ const ProductList = () => {
     const { data } = useQuery<Products>(QueryKeys.PRODUCTS, () =>
         graphqlFetcher(GET_PRODUCTS),
     );
+    // Query를 통해서 key값과 전달할 Query값을 콜백으로 전달한다.
     return (
         <div>
             <h2>상품목록</h2>
